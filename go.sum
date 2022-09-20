@@ -1,0 +1,7 @@
+github.com/google/go-cmp v0.5.9 h1:O2Tfq5qg4qc4AmwVlvv0oLiVAGB7enBSJ2x2DqQFi38=
+github.com/google/go-cmp v0.5.9/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
+github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
+github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/kinbiko/jsonassert v1.0.2 h1:UzNDYv5K8UsSHXS3Opsf0ZNz2NQCHl96OC3dlTytUtE=
+github.com/pfmt/pfmt v0.3.0 h1:dEAJpmJ3zsSuxpUSR569/Izw667vurdozqPAPJA2ySg=
+github.com/pfmt/pfmt v0.3.0/go.mod h1:5mnWs+PbGS3dUyIXM8gwCxCkB7LFZPEagz6eZj8IXSc=
