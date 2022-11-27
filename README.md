@@ -14,12 +14,14 @@ its extremely slow and allocates a lots of memory.
 ## Benchmark
 
 ```sh
-$ go test -count=1 -race -bench ./... 
+$ go test -count=1 -race -bench=. -benchmem ./...
 goos: linux
 goarch: amd64
 pkg: github.com/pfmt/uuidslice
 cpu: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
-BenchmarkUniqueCopy/slice_test.go:31-8         	 1628802	       746.8 ns/op
+BenchmarkStringCopy/slice_test.go:34-8         	 2978049	       422.3 ns/op	       0 B/op	       0 allocs/op
+BenchmarkUniqueCopy/slice_test.go:168-8        	 1729981	       683.7 ns/op	      57 B/op	       0 allocs/op
+BenchmarkExceptCopy/slice_test.go:316-8        	 1922455	       627.1 ns/op	      56 B/op	       0 allocs/op
 PASS
-ok  	github.com/pfmt/uuidslice	1.995s
+ok  	github.com/pfmt/uuidslice	5.419s
 ```
