@@ -1,7 +1,8 @@
-// Copyright 2022 The Go Authors. All rights reserved.
+// Copyright 2023 The Go Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+// Package uuidslice copying of parsed/unique UUIDs to slice for Go.
 package uuidslice
 
 import (
@@ -69,7 +70,7 @@ func UniqueCopy(dst, src []uuid.UUID) int {
 
 // ExceptCopy fills the destination slice with UUIDs from first srouce
 // excepts UUIDs from another source, preserving order.
-func ExceptCopy(dst, src []uuid.UUID, src2 []uuid.UUID) int {
+func ExceptCopy(dst, src []uuid.UUID, except []uuid.UUID) int {
 	if len(dst) == 0 || len(src) == 0 {
 		return 0
 	}
@@ -81,8 +82,8 @@ func ExceptCopy(dst, src []uuid.UUID, src2 []uuid.UUID) int {
 		delete(exceptness, id)
 	}
 
-	for i := 0; i < len(src2); i++ {
-		exceptness[src2[i]] = struct{}{}
+	for i := 0; i < len(except); i++ {
+		exceptness[except[i]] = struct{}{}
 	}
 
 	var n int

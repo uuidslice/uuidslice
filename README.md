@@ -3,7 +3,7 @@
 [![Build Status](https://cloud.drone.io/api/badges/pfmt/uuidslice/status.svg)](https://cloud.drone.io/pfmt/uuidslice)
 [![Go Reference](https://pkg.go.dev/badge/github.com/pfmt/uuidslice.svg)](https://pkg.go.dev/github.com/pfmt/uuidslice)
 
-UUID slice utils for Go.  
+Copying of parsed/unique UUIDs to slice for Go.  
 Source files are distributed under the BSD-style license.
 
 ## About

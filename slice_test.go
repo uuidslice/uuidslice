@@ -1,4 +1,4 @@
-// Copyright 2022 The Go Authors. All rights reserved.
+// Copyright 2023 The Go Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
@@ -67,8 +67,8 @@ var stringCopyTests = []struct {
 func TestStringCopy(t *testing.T) {
 	t.Parallel()
 
-	keep := stringCopyTests[:0]
-	skip := stringCopyTests[:0]
+	keep := stringCopyTests[:0:0]
+	skip := stringCopyTests[:0:0]
 
 	for _, tt := range stringCopyTests {
 		if tt.keep {
@@ -115,8 +115,8 @@ func TestStringCopy(t *testing.T) {
 func BenchmarkStringCopy(b *testing.B) {
 	b.ReportAllocs()
 
-	keep := stringCopyTests[:0]
-	skip := stringCopyTests[:0]
+	keep := stringCopyTests[:0:0]
+	skip := stringCopyTests[:0:0]
 
 	for _, tt := range stringCopyTests {
 		if tt.keep {
@@ -206,8 +206,8 @@ var uniqueCopyTests = []struct {
 func TestUniqueCopy(t *testing.T) {
 	t.Parallel()
 
-	keep := uniqueCopyTests[:0]
-	skip := uniqueCopyTests[:0]
+	keep := uniqueCopyTests[:0:0]
+	skip := uniqueCopyTests[:0:0]
 
 	for _, tt := range uniqueCopyTests {
 		if tt.keep {
@@ -250,8 +250,8 @@ func TestUniqueCopy(t *testing.T) {
 func BenchmarkUniqueCopy(b *testing.B) {
 	b.ReportAllocs()
 
-	keep := uniqueCopyTests[:0]
-	skip := uniqueCopyTests[:0]
+	keep := uniqueCopyTests[:0:0]
+	skip := uniqueCopyTests[:0:0]
 	for _, tt := range uniqueCopyTests {
 		if tt.keep {
 			keep = append(keep, tt)
@@ -325,8 +325,8 @@ var exceptCopyTests = []struct {
 func TestExceptCopy(t *testing.T) {
 	t.Parallel()
 
-	keep := exceptCopyTests[:0]
-	skip := exceptCopyTests[:0]
+	keep := exceptCopyTests[:0:0]
+	skip := exceptCopyTests[:0:0]
 
 	for _, tt := range exceptCopyTests {
 		if tt.keep {
@@ -369,8 +369,8 @@ func TestExceptCopy(t *testing.T) {
 func BenchmarkExceptCopy(b *testing.B) {
 	b.ReportAllocs()
 
-	keep := exceptCopyTests[:0]
-	skip := exceptCopyTests[:0]
+	keep := exceptCopyTests[:0:0]
+	skip := exceptCopyTests[:0:0]
 	for _, tt := range exceptCopyTests {
 		if tt.keep {
 			keep = append(keep, tt)
